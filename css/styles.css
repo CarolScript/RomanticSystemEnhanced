@@ -1,0 +1,84 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.header {
+    text-align: center;
+    background: linear-gradient(135deg, #ff5f6d, #ffc371);
+    color: white;
+    padding: 20px;
+}
+.header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+.header p {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    flex: 1; /* Pushes the footer to the bottom */
+}
+.card {
+    background: #1c1c1c;
+    border: 2px solid #ff5f6d;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(255, 95, 109, 0.5);
+}
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.timeline-item {
+    display: flex;
+    align-items: center;
+}
+.timeline-icon {
+    background-color: #ff5f6d;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+button {
+    background: linear-gradient(135deg, #ff5f6d, #ffc371);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+button:hover {
+    background: #ff4d6d;
+}
+.output {
+    font-weight: bold;
+    color: #ffc371;
+    margin-top: 10px;
+}
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #ff5f6d;
+    color: white;
+}

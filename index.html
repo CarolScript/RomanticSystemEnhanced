@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Amor - Emilly & João Lucas</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1>Emilly & João Lucas</h1>
+        <p>"Uma história abençoada e guiada pelo amor e pela fé."</p>
+    </header>
+    <main class="container">
+        <section id="timeline" class="card">
+            <h2><i class="fas fa-history"></i> Timeline do Amor</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-star"></i></div>
+                    <div class="timeline-content">
+                        <p>Primeiro encontro no grupo de jovens.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-child"></i></div>
+                    <div class="timeline-content">
+                        <p>Descobrimos que já nos conhecíamos na infância.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-handshake"></i></div>
+                    <div class="timeline-content">
+                        <p>Nos tornamos melhores amigos.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-heart"></i></div>
+                    <div class="timeline-content">
+                        <p>Me apaixonei por você pelo cuidado que tinha por mim.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-ring"></i></div>
+                    <div class="timeline-content">
+                        <p>Pedido de namoro em 9 de julho.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-calendar-check"></i></div>
+                    <div class="timeline-content">
+                        <p>Planejamento do casamento: 7 de fevereiro de 2026 às 16:00.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="write-messages" class="card">
+            <h2><i class="fas fa-pencil-alt"></i> Escreva para o outro</h2>
+            <textarea id="message-box" placeholder="Escreva algo especial aqui..."></textarea>
+            <button onclick="saveMessage()">Salvar Mensagem</button>
+            <p id="saved-message" class="output"></p>
+        </section>
+        <section id="song-generator" class="card">
+            <h2><i class="fas fa-music"></i> Músicas que me lembram você</h2>
+            <p>Clique para ouvir uma música especial:</p>
+            <button onclick="generateSong()">Tocar Música</button>
+            <p id="generated-song" class="output"></p>
+        </section>
+        <section id="letter-generator" class="card">
+            <h2><i class="fas fa-envelope"></i> Gerador de Cartas</h2>
+            <p>Clique para receber uma mensagem especial:</p>
+            <button onclick="generateLetter()">Gerar Carta</button>
+            <p id="generated-letter" class="output"></p>
+        </section>
+        <section id="countdown" class="card">
+            <h2><i class="fas fa-calendar-alt"></i> Contagem Regressiva</h2>
+            <p>Faltam para o nosso grande dia:</p>
+            <p id="countdown-timer" class="output"></p>
+        </section>
+        <section id="treasure-hunt" class="card">
+            <h2><i class="fas fa-search"></i> Caça ao Tesouro</h2>
+            <p>Resolva as pistas para desbloquear mensagens ocultas:</p>
+            <button onclick="revealClue()">Revelar Pista</button>
+            <p id="clue-output" class="output"></p>
+        </section>
+        <section id="about-us" class="card">
+            <h2><i class="fas fa-heart"></i> Sobre Nós</h2>
+            <p>
+                Era uma vez, em uma pequena cidade, duas almas cujas vidas pareciam destinadas a se cruzar desde sempre. Nossas famílias, sem que soubéssemos, já haviam traçado os primeiros fios dessa conexão. A mãe dele cantava com meu pai no ministério de música, e os avós dele serviram no casamento da minha tia.
+                Éramos crianças quando nos conhecemos pela primeira vez, mas as memórias eram vagas, como um sussurro do destino que ainda não se revelara completamente.
+                Anos depois, nos reencontramos em um grupo de jovens da igreja. Ele, com a calma de quem sabia mais sobre o mundo, e eu, cheia de sonhos e determinação.
+                A amizade cresceu como uma flor delicada, regada pelas nossas conversas, risadas e momentos compartilhados. Tornamo-nos melhores amigos, inseparáveis. No entanto, como em toda boa história de amor, havia um sentimento latente, algo mais profundo que começava a surgir.
+                Por três anos, neguei a possibilidade de um amor além da amizade. Os amigos dele insinuavam, brincavam, mas eu insistia: "Ele é meu melhor amigo, nada mais." Até que o destino decidiu intervir. Uma pequena briga nos afastou, e pela primeira vez senti o vazio da sua ausência. Foi nesse silêncio que percebi que ele era mais do que um amigo. Ele era o motivo das minhas risadas mais sinceras e dos meus pensamentos mais doces.
+                Lembro-me do dia em que finalmente admiti o que sentia. Meu coração estava acelerado, e as palavras saíram como uma confissão guardada há tempos. Enviei uma mensagem dizendo que gostava dele mais do que como amigo. O medo de perder o que tínhamos foi substituído por uma sensação avassaladora de alívio e felicidade quando ele respondeu que sentia o mesmo.
+                Nosso relacionamento começou como uma chama tímida, crescendo em intensidade com o tempo. Ele me pediu em namoro em 9 de julho, apenas alguns dias antes do meu aniversário de 17 anos. A partir daquele momento, vivemos juntos uma jornada de amadurecimento, aprendendo a amar não apenas os sorrisos, mas também as vulnerabilidades um do outro.
+                Nossa fé sempre esteve presente, guiando nossos passos. Em momentos de incerteza, eram as orações e os sinais divinos que nos davam força. Como quando, durante uma oração, pedimos um sinal, e a vela apagada se acendeu sozinha. Cada um desses momentos reforçava o que já sabíamos em nossos corações: fomos feitos um para o outro.
+                Hoje, nosso amor é como um rio tranquilo, profundo e constante. Não há necessidade de grandes demonstrações; basta a companhia um do outro para que tudo faça sentido. Construímos juntos sonhos que agora tomam forma como nossa casa e nosso casamento marcado para fevereiro de 2026.
+                Amar o João é como encontrar um lar. Ele é minha alma gêmea, meu melhor amigo e o amor da minha vida. Cada música, cada lugar, cada riso compartilhado é um lembrete de que fomos abençoados com algo raro: um amor que é ao mesmo tempo terreno e divino.
+                E assim seguimos, escrevendo juntos a mais bela das histórias, com Deus guiando cada capítulo.
+            </p>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>Com amor, Emilly & João Lucas 💕</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
